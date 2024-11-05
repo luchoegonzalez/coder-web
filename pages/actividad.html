@@ -7,60 +7,80 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../css/estilos.css">
-    <title>Lucirro</title>
+    <title>LIVE Games</title>
 </head>
 <body>
-    <header>
-        <nav>
-            <img class="nav-logo" src="../images/logo.png" alt="logo videojuegos">
-            <ul>
-                <li><a href="../index.html">Inicio</a></li>
-                <li><a href="juegos.html">Juegos</a></li>
-                <li><a href="nosotros.html">Nosotros</a></li>
-                <li><a href="#">Actividad</a></li>
-                <li><a href="contacto.html">Contacto</a></li>
-            </ul>
+    <header class="header">
+        <nav class="header__nav">
+            <div class="header__nav__content container">
+                <img class="header__nav__logo" src="../images/logo.png" alt="logo videojuegos">
+                <ul class="header__nav__menu">
+                    <li class="header__nav__item"><a href="../index.html" class="header__nav__link">Inicio</a></li>
+                    <li class="header__nav__item"><a href="juegos.html" class="header__nav__link">Juegos</a></li>
+                    <li class="header__nav__item"><a href="nosotros.html" class="header__nav__link">Nosotros</a></li>
+                    <li class="header__nav__item"><a href="#" class="header__nav__link">Actividad</a></li>
+                    <li class="header__nav__item"><a href="contacto.html" class="header__nav__link">Contacto</a></li>
+                </ul>
+            </div>
         </nav>
     </header>
-    <main class="container-center">
-        <section id="actividad">
-            <h1 class="titulo-pages">Eventos</h1>
-            <div class="card-evento">
-                <img src="../images/eva.png" alt="EVA">
-                <h3>EVA 2024</h3>
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsa architecto recusandae eligendi illum ex alias vel tempore harum ab. Libero deserunt minima optio incidunt, quaerat voluptatem illo iure obcaecati delectus?</p>
-                <a target="_blank" href="https://expoeva.com/">Leer más<img src="../images/icons/external-link.svg" alt="external link" width="20px"></a>
-            </div>
-            <div class="card-evento">
-                <img src="../images/gdc.png" alt="GDC">
-                <h3>GDC 2023</h3>
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsa architecto recusandae eligendi illum ex alias vel tempore harum ab. Libero deserunt minima optio incidunt, quaerat voluptatem illo iure obcaecati delectus?</p>
-                <a target="_blank" href="https://gdconf.com/">Leer más<img src="../images/icons/external-link.svg" alt="external link" width="20px"></a>
-            </div>
-        </section>
-        <section id="actividad">
-            <h1 class="subtitulo-pages">Charlas</h1>
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/F9sFqCsxdZc?si=OI-yaNxZKo9LpWK_" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/zyVTxGpEO30?si=7jEEg_7IkNI0sttx" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-        </section>
-    </main>
-    <footer>
-        <div class="container-center">
-            <div class="container-izq">
-                <img class="footer-logo" src="../images/logo.png" alt="logo">
-                <div class="container-redes">
-                    <a class="red-social" target="_blank" href="https://www.instagram.com/luchoegonzalez/"><img src="../images/icons/instagram-icon.png" alt="Instagram"></a>
-                    <a class="red-social" target="_blank" href="https://www.youtube.com/@lucianogonzalez6835"><img src="../images/icons/youtube-icon.png" alt="Youtube"></a>
-                    <a class="red-social" target="_blank" href="https://lucirro.itch.io/"><img src="../images/icons/itchio-icon.png" alt="Itch.io"></a>
+    <main class="main main-offset container">
+        <section class="activity">
+            <h1 class="activity__title">Eventos</h1>
+            <div class="activity__card">
+                <img class="activity__card-image" src="../images/eva.png" alt="EVA">
+                <div class="activity__card-content">
+                    <h3 class="activity__card-title">EVA 2024</h3>
+                    <p class="activity__card-description">
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsa architecto recusandae eligendi illum ex alias vel tempore harum ab. Libero deserunt minima optio incidunt, quaerat voluptatem illo iure obcaecati delectus?
+                    </p>
+                    <a class="activity__card-link" target="_blank" href="https://expoeva.com/">
+                        Leer más
+                        <img src="../images/icons/external-link.svg" alt="external link" width="20px">
+                    </a>
                 </div>
             </div>
-            <div class="container-der">
-                <h5 class="titulo-footer">Contacto</h5>
-                <a class="enlace-footer" href="mailto:luciano@lucirro.com"><img src="../images/icons/mail.svg" alt="email">luciano@lucirro.com</a>
-                <a class="enlace-footer" target="_blank" href="https://maps.app.goo.gl/XfsGJ75UxnUcG2Mv9"><img src="../images/icons/pin.svg" alt="email">Av. Montes de Oca 700, CABA, Argentina</a>
+            <div class="activity__card">
+                <img class="activity__card-image" src="../images/gdc.png" alt="GDC">
+                <div class="activity__card-content">
+                    <h3 class="activity__card-title">GDC 2023</h3>
+                    <p class="activity__card-description">
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsa architecto recusandae eligendi illum ex alias vel tempore harum ab. Libero deserunt minima optio incidunt, quaerat voluptatem illo iure obcaecati delectus?
+                    </p>
+                    <a class="activity__card-link" target="_blank" href="https://gdconf.com/">
+                        Leer más
+                        <img src="../images/icons/external-link.svg" alt="external link" width="20px">
+                    </a>
+                </div>
             </div>
-            <hr>
-            <p class="copyright">Lucirro 2024 &#169; Todos los derechos reservados</p>
+        </section>
+    
+        <section class="talks">
+            <h1 class="talks__title">Charlas</h1>
+            <div class="talks__videos">
+                <iframe class="talks__video" width="560" height="315" src="https://www.youtube.com/embed/F9sFqCsxdZc?si=OI-yaNxZKo9LpWK_" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                <iframe class="talks__video" width="560" height="315" src="https://www.youtube.com/embed/zyVTxGpEO30?si=7jEEg_7IkNI0sttx" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
+        </section>
+    </main>
+    
+    <footer class="footer">
+        <div class="footer__container container">
+            <div class="footer__left">
+                <img class="footer__logo" src="../images/logo.png" alt="logo">
+                <div class="footer__socials">
+                    <a href="https://www.instagram.com/luchoegonzalez/" target="_blank" class="footer__social"><img src="../images/icons/instagram-icon.png" alt="Instagram"></a>
+                    <a href="https://www.youtube.com/@lucianogonzalez6835" target="_blank" class="footer__social"><img src="../images/icons/youtube-icon.png" alt="Youtube"></a>
+                    <a href="https://LIVE Games.itch.io/" target="_blank" class="footer__social"><img src="../images/icons/itchio-icon.png" alt="Itch.io"></a>
+                </div>
+            </div>
+            <div class="footer__right">
+                <h5 class="footer__title">Contacto</h5>
+                <a href="mailto:luciano@LIVE Games.com" class="footer__contact"><img src="../images/icons/mail.svg" alt="email">luciano@LIVE Games.com</a>
+                <a href="https://maps.app.goo.gl/XfsGJ75UxnUcG2Mv9" target="_blank" class="footer__contact"><img src="../images/icons/pin.svg" alt="dirección">Av. Montes de Oca 700, CABA, Argentina</a>
+            </div>
+            <hr class="footer__divider">
+            <p class="footer__copyright">LIVE Games 2024 &#169; Todos los derechos reservados</p>
         </div>
     </footer>
 </body>
