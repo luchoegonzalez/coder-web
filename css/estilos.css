@@ -1,7 +1,7 @@
 /* Variables */
 :root {
-    --main-dark-color: #1A1A1D;
-    --main-color: #76ABAE;
+    --main-dark-color: #141416;
+    --alt-dark-color: #000000;
     --main-light-color: #fafafa;
 
     --main-red-live: #ff3264;
@@ -18,7 +18,7 @@
 }
 
 body {
-    background-color: var(--main-dark-color);
+    background-color: var(--alt-dark-color);
     font-family: "Barlow", sans-serif;
     font-weight: 400;
 }
@@ -53,7 +53,7 @@ a {
     z-index: 1000;
 }
 
-.header__nav::after {
+.header__nav::after, .banner::after {
     content: "";
     position: absolute;
     bottom: 0px;
@@ -69,9 +69,13 @@ a {
         var(--main-cyan-live) 75%,
         var(--main-violet-live) 75%
     );
-    background-size: 200% 100%; /* Tamaño duplicado para desplazamiento suave */
+    background-size: 200% 100%;
     animation: borderRotate 24s linear infinite;
     border-radius: 20px;
+}
+
+.banner::after {
+    animation: borderRotateAlt 24s linear infinite;
 }
 
 @keyframes borderRotate {
@@ -80,6 +84,15 @@ a {
     }
     100% {
         background-position: 200% 100%;
+    }
+}
+
+@keyframes borderRotateAlt {
+    0% {
+        background-position: 200% 100%;
+    }
+    100% {
+        background-position: 0% 100%;
     }
 }
 
@@ -133,6 +146,7 @@ li:nth-child(5) > a:hover {
     display: flex;
     justify-content: center;
     align-items: center;
+    background-image: url(https://img.itch.zone/aW1nLzEyMTU0MjYwLnBuZw==/original/Mx4h3G.png);
 }
 
 .banner__image {
@@ -142,6 +156,7 @@ li:nth-child(5) > a:hover {
 
 .banner__text {
     position: absolute;
+    text-align: center;
     font-size: 1.5em;
     top: 50%;
     left: 50%;
@@ -414,15 +429,15 @@ li:nth-child(5) > a:hover {
 }
 
 .footer__social:hover:nth-of-type(1) {
-    background-color: #ff3264;
+    background-color: var(--main-violet-live);
 }
 
 .footer__social:hover:nth-of-type(2) {
-    background-color: #ffff00;
+    background-color: var(--main-red-live);
 }
 
 .footer__social:hover:nth-of-type(3) {
-    background-color: #00ffff;
+    background-color: var(--main-cyan-live);
 }
 
 .footer__social img {
@@ -441,10 +456,15 @@ li:nth-child(5) > a:hover {
     font-size: 1.5rem;
 }
 
-.footer__contact {
+.footer__contact, .footer__text {
     display: flex;
     align-items: center;
     margin-top: 0.5em;
+}
+
+.footer__contact:hover {
+    color: var(--main-yellow-live);
+    text-decoration: underline;
 }
 
 .footer__contact img {
