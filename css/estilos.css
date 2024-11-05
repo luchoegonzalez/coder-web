@@ -486,3 +486,62 @@ li:nth-child(5) > a:hover {
     text-align: center;
     color: var(--main-light-color);
 }
+
+/* Media Querys */
+@media (max-width: 600px) {
+    .container {
+        width: 95%;
+    }
+
+    .header__nav__menu {
+        display: none;
+        flex-direction: column;
+        padding: 20px;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: var(--main-dark-color);
+        text-align: center;
+    }
+
+    .header__nav__link {
+        font-size: 1.3rem;
+    }
+
+    .header__nav__menu.show {
+        display: flex;
+    }
+
+    .header__nav__toggle {
+        display: inline-block;
+        margin-top: -5px;
+        font-size: 3rem;
+        cursor: pointer;
+        color: var(--main-light-color);
+    }
+
+    .banner {
+        height: 80vh;
+    }
+
+    .banner__text {
+        font-size: 1.15em;
+    }
+
+    .footer {
+        padding-top: 1em;
+    }
+
+    .footer__container {
+        text-align: center;
+        flex-wrap: nowrap;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .footer__right{
+        margin-top: 2em;
+    }
+}
