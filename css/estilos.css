@@ -377,14 +377,23 @@ li:nth-child(5) > a:hover {
 }
 
 .footer__right {
-    background-color: white;
-    display: flex;
-    align-items: end;
-    justify-content: end;
+    display: grid; /* Activa Grid en el contenedor */
+    grid-template-columns: repeat(2, auto); /* Dos columnas para las primeras dos imágenes */
+    grid-template-rows: auto auto; /* Dos filas: una para las imágenes en la primera fila y otra para la última imagen */
+    gap: 10px; /* Espacio entre las imágenes */
+    justify-items: center; /* Centra los elementos dentro de las celdas del grid */
 }
 
 .footer__logo {
-    width: 100px;
+    height: 60px; /* Ajusta el ancho según sea necesario */
+    width: auto; /* Mantiene la relación de aspecto */
+}
+
+.caeti {
+    width: 120px; /* Ancho específico para la imagen CAETI */
+    height: auto;
+    grid-column: 1 / -1; /* Hace que esta imagen ocupe toda la segunda fila */
+    justify-self: center; /* Centra la imagen en su celda */
 }
 
 .footer__socials {
