@@ -340,21 +340,10 @@ li:nth-child(5) > a:hover {
 }
 
 /* Page Actividad */
-.activity,
-.talks {
-    margin-bottom: 40px;
-}
-
-.activity__title,
-.talks__title {
-    font-size: 2rem;
-    margin-bottom: 20px;
-}
-
 .activity__card {
     display: flex;
     gap: 20px;
-    align-items: flex-start;
+    align-items: center;
     margin-bottom: 20px;
     border: 1px solid #ddd;
     padding: 20px;
@@ -374,6 +363,7 @@ li:nth-child(5) > a:hover {
 }
 
 .activity__card-title {
+    text-align: left;
     font-size: 1.5rem;
     font-weight: bold;
 }
@@ -384,19 +374,31 @@ li:nth-child(5) > a:hover {
 }
 
 .activity__card-link {
-    color: #0066cc;
+    color: var(--main-dark-color);
+    background-color: var(--main-light-color);
+    width: 100px;
+    padding: 5px;
+    border-radius: 5px;
     text-decoration: none;
     display: flex;
+    justify-content: center;
     align-items: center;
     gap: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.activity__card-link:hover {
+    background-color: var(--main-yellow-live);
 }
 
 .activity__card-link img {
+    padding-top: 3px;
     width: 20px;
     height: 20px;
 }
 
 .talks__videos {
+    margin-top: 20px;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 20px;
@@ -404,7 +406,7 @@ li:nth-child(5) > a:hover {
 
 .talks__video {
     width: 100%;
-    height: auto;
+    height: 315px;
 }
 
 /* Page Juegos */
@@ -455,6 +457,86 @@ li:nth-child(5) > a:hover {
     color: var(--main-light-color);
 }
 
+/* Page Contacto */
+.contact_links{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 50px;
+}
+
+.contact__link {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--main-light-color);
+    text-decoration: none;
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.contact__link:hover {
+    text-decoration: underline;
+    color: var(--main-yellow-live);
+}
+
+.contact__icon {
+    width: 24px;
+    height: 24px;
+    filter: invert(100%);
+}
+
+.contact__form {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.contact__label {
+    font-size: 1.1rem;
+    color: var(--main-light-color);
+}
+
+.contact__input,
+.contact__textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid var(--main-light-color);
+    color: var(--main-light-color);
+    border-radius: 5px;
+    font-size: 1rem;
+    background-color: var(--main-dark-color);
+}
+
+.contact__textarea {
+    resize: vertical;
+}
+
+.contact__button {
+    background-color: var(--main-light-color);
+    color: var(--main-dark-color);
+    border: none;
+    padding: 10px 15px;
+    margin-top: 15px;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.contact__button:hover {
+    background-color: var(--main-violet-live);
+}
+
+.location__map {
+    margin-top: 15px;
+    width: 100%;
+    max-width: 800px;
+    height: 450px;
+    border: none;
+}
 
 /* Footer */
 .footer {
@@ -623,5 +705,14 @@ li:nth-child(5) > a:hover {
 
     .footer__right{
         margin-top: 2em;
+    }
+
+    .activity__card {
+        flex-direction: column;
+        align-items: flex-start; 
+    }
+
+    .activity__card-image {
+        margin-bottom: 10px;
     }
 }
