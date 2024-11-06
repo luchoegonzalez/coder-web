@@ -212,18 +212,39 @@ li:nth-child(5) > a:hover {
     margin-top: 0.5em;
 }
 
-.button {
+.button--link {
     display: inline-block;
     margin-top: 1em;
     padding: 0.5em 1em;
     font-size: 1rem;
-    background-color: var(--main-color);
-    color: var(--main-light-color);
+    color: var(--main-dark-color);
     border-radius: 5px;
+    animation: backgroundColorCycle 5s linear infinite;
+    transition: background-color 0.3s ease;
 }
 
-.button--more:hover {
-    background-color: var(--main-dark-color);
+.button--link:hover {
+    animation: none;
+    transition: background-color 0.3s ease;
+    background-color: var(--main-light-color);
+}
+
+@keyframes backgroundColorCycle {
+    0% {
+        background-color: var(--main-red-live);
+    }
+    25% {
+        background-color: var(--main-yellow-live);
+    }
+    50% {
+        background-color: var(--main-cyan-live);
+    }
+    75% {
+        background-color: var(--main-violet-live);
+    }
+    100% {
+        background-color: var(--main-red-live);
+    }
 }
 
 .cards {
