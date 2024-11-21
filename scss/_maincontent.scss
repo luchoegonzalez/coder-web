@@ -1,0 +1,110 @@
+.section {
+  margin: 2em 0;
+  text-align: center;
+
+  &__title {
+    font-size: 2rem;
+  }
+}
+
+.games {
+  display: flex;
+  gap: 1em;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+  .game {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &__image {
+      width: 350px;
+    }
+
+    &__title {
+      text-align: left;
+      margin-top: 0.5em;
+    }
+  }
+}
+
+.button--link {
+  display: inline-block;
+  margin-top: 1em;
+  padding: 0.5em 1em;
+  font-size: 1rem;
+  color: $main-dark-color;
+  border-radius: 5px;
+  animation: backgroundColorCycle 5s linear infinite;
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    animation: none;
+    background-color: $main-light-color;
+  }
+}
+
+.cards {
+  display: flex;
+  gap: 15px;
+  overflow-x: auto;
+  padding: 20px 5px;
+  width: 100%;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+
+  &::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background-color: transparent;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: $main-yellow-live;
+    border-radius: 4px;
+  }
+}
+
+.card {
+    flex: 0 0 auto;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    width: 250px;
+    background-color: $main-dark-color;
+    border-radius: 8px;
+    overflow: hidden;
+    text-align: left;
+    text-decoration: none;
+    color: inherit;
+    scroll-snap-align: start;
+    padding: 7px;
+    transition: transform 0.3s;
+    scrollbar-color: $main-yellow-live transparent;
+
+    &:hover {
+      outline: 2px solid;
+      outline-offset: -2px;
+      animation: borderColorCycle 3s infinite;
+    }
+
+    &__image {
+      border-radius: 8px;
+      width: 100%;
+      height: auto;
+    }
+
+    &__title {
+      margin: 5px 0;
+      font-size: 1.5rem;
+      color: $main-light-color;
+    }
+
+    &__description {
+      font-size: 0.9rem;
+      color: $main-light-color;
+    }
+}

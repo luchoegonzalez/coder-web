@@ -1,0 +1,53 @@
+@keyframes borderRotate {
+  0% {
+    background-position: 0% 100%;
+  }
+  100% {
+    background-position: 200% 100%;
+  }
+}
+
+@keyframes borderRotateAlt {
+  0% {
+    background-position: 200% 100%;
+  }
+  100% {
+    background-position: 0% 100%;
+  }
+}
+
+@keyframes backgroundColorCycle {
+  0% {
+    background-color: $main-red-live;
+  }
+  25% {
+    background-color: $main-yellow-live;
+  }
+  50% {
+    background-color: $main-cyan-live;
+  }
+  75% {
+    background-color: $main-violet-live;
+  }
+  100% {
+    background-color: $main-red-live;
+  }
+}
+
+@keyframes borderColorCycle {
+  0% {
+    outline-color: $main-red-live;
+  }
+  25% {
+    outline-color: $main-yellow-live;
+  }
+  50% {
+    outline-color: $main-cyan-live;
+  }
+  75% {
+    outline-color: $main-violet-live;
+  }
+  100% {
+    outline-color: $main-red-live;
+  }
+}

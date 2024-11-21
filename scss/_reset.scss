@@ -1,0 +1,58 @@
+// Variables
+$main-dark-color: #141416;
+$alt-dark-color: #000000;
+$main-light-color: #fafafa;
+$main-red-live: #ff3264;
+$main-yellow-live: #ffff00;
+$main-cyan-live: #00ffff;
+$main-violet-live: #af5aff;
+$breakpoint: 600px;
+
+// Mixins
+@mixin responsive() {
+  @media (max-width: $breakpoint) {
+    @content;
+  }
+}
+
+// General styles
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: $alt-dark-color;
+  font-family: "Barlow", sans-serif;
+  font-weight: 400;
+}
+
+h1, h2, h3, h4, h5 {
+  font-weight: 700;
+  font-style: normal;
+  color: $main-light-color;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.container {
+  width: 90%;
+  margin: 0 auto;
+  @include responsive(){
+    width: 95%;
+  }
+}
+
+.main-offset {
+  padding-top: 80px;
+}
+
+p {
+  color: $main-light-color;
+  font-size: 1.1rem;
+  text-align: left;
+}
