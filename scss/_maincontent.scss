@@ -109,3 +109,44 @@
       color: $main-light-color;
     }
 }
+
+#nosotros {
+  margin-top: 50px;
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 20px;
+  
+  .nosotros__content {
+    flex: 1;
+    max-width: 50%;
+    text-align: right;
+
+    h2 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+
+    h3 {
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+    }
+
+    h4 {
+      font-size: 1.25rem;
+    }
+  }
+
+  .nosotros__image{
+    flex: 1;
+    max-width: 50%;
+    text-align: center;
+
+    img {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+    }
+  }
+}
