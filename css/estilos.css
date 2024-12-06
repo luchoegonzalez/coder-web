@@ -423,6 +423,10 @@ p {
   color: #fafafa;
 }
 
+#equipo {
+  margin: 50px 0px;
+}
+
 #actividad p {
   text-align: center;
 }
