@@ -116,6 +116,12 @@ p {
   justify-content: space-between;
   align-items: center;
 }
+.header__nav__home {
+  text-decoration: none;
+  outline: none;
+  border: none;
+  font-size: 0;
+}
 .header__nav__logo {
   height: 50px;
 }
@@ -721,7 +727,5 @@ p {
   text-align: center;
   color: #fafafa;
 }
-
-/* Media Querys */
 
 /*# sourceMappingURL=estilos.css.map */

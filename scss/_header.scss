@@ -34,6 +34,13 @@
     align-items: center;
   }
 
+  &__home {
+    text-decoration: none;
+    outline: none;
+    border: none;
+    font-size: 0;
+  }
+
   &__logo {
     height: 50px;
   }
