@@ -22,6 +22,12 @@ $breakpoint: 600px;
   box-sizing: border-box;
 }
 
+.page * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
   background-color: $alt-dark-color;
   font-family: "Barlow", sans-serif;
@@ -34,12 +40,16 @@ h1, h2, h3, h4, h5 {
   color: $main-light-color;
 }
 
+h1 {
+  font-size: 2em;
+}
+
 a {
   text-decoration: none;
   color: inherit;
 }
 
-.container {
+.container-90 {
   width: 90%;
   margin: 0 auto;
   @include responsive(){

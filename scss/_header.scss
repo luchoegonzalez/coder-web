@@ -45,44 +45,18 @@
     height: 50px;
   }
 
-  &__toggle {
-    display: none;
-    @include responsive(){
-        display: inline-block;
-        margin-top: -5px;
-        font-size: 3rem;
-        cursor: pointer;
-        color: $main-light-color;
-    }
-  }
-
   &__menu {
     list-style: none;
     display: flex;
-    gap: 1em;
-
-    @include responsive(){
-        display: none;
-        flex-direction: column;
-        padding: 20px;
-        position: absolute;
-        top: 100%;
-        left: 0;
-        width: 100%;
-        background-color: $main-dark-color;
-        text-align: center;
-    }
-
-    &.show {
-        display: flex;
-    }
+    align-items: center;
 
     .header__nav__link {
       color: $main-light-color;
       font-size: 1.15rem;
       transition: color 0.3s;
 
-      @include responsive(){
+      @media (max-width: 768px) {
+        margin: 5px 0px;
         font-size: 1.3rem;
       }
     }
@@ -105,6 +79,17 @@
       }
     }
   }
+}
+
+.navbar-toggler {
+  border: none; 
+  outline: none; 
+}
+
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,255,255,0.85)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+  height: 40px;
+  width: 40px;
 }
 
 // Banner
