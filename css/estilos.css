@@ -185,7 +185,7 @@ p {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-image: url(https://img.itch.zone/aW1nLzEyMTU0MjYwLnBuZw==/original/Mx4h3G.png);
+  background-image: url(../images/live-background.png);
 }
 @media (max-width: 600px) {
   .banner {
