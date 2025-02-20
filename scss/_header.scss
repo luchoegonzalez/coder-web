@@ -1,3 +1,5 @@
+@use "reset" as *;
+
 // Header
 .header__nav {
   background-color: $main-dark-color;
@@ -115,7 +117,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-image: url(https://img.itch.zone/aW1nLzEyMTU0MjYwLnBuZw==/original/Mx4h3G.png);
+  background-image: url(../images/live-pattern.png);
   @include responsive(){
     height: 80vh;
   }

@@ -1,9 +1,9 @@
-@import "reset";
-@import "animations";
-@import "header"; //incluye banner
-@import "maincontent";
-@import "juegos";
-@import "nosotros";
-@import "actividad";
-@import "contacto";
-@import "footer";
+@use "reset";
+@use "animations";
+@use "header"; //incluye banner
+@use "maincontent";
+@use "juegos";
+@use "nosotros";
+@use "actividad";
+@use "contacto";
+@use "footer";
