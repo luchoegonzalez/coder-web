@@ -46,6 +46,7 @@
   gap: 10px;
   max-width: 800px;
   margin: 0 auto;
+  margin-bottom: 50px;
 }
 
 .contact__label {
@@ -88,12 +89,4 @@
   &:hover {
     background-color: $main-violet-live;
   }
-}
-
-.location__map {
-  margin-top: 15px;
-  width: 100%;
-  max-width: 800px;
-  height: 450px;
-  border: none;
 }

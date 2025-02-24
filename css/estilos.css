@@ -4,7 +4,7 @@
   box-sizing: border-box;
 }
 
-body {
+body, input, textarea {
   background-color: #000000;
   font-family: "Barlow", sans-serif;
   font-weight: 400;
@@ -537,6 +537,7 @@ p {
   gap: 10px;
   max-width: 800px;
   margin: 0 auto;
+  margin-bottom: 50px;
 }
 
 .contact__label {
@@ -578,14 +579,6 @@ p {
 }
 .contact__button:hover {
   background-color: #af5aff;
-}
-
-.location__map {
-  margin-top: 15px;
-  width: 100%;
-  max-width: 800px;
-  height: 450px;
-  border: none;
 }
 
 .footer {

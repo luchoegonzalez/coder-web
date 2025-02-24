@@ -22,7 +22,7 @@ $breakpoint: 600px;
   box-sizing: border-box;
 }
 
-body {
+body, input, textarea {
   background-color: $alt-dark-color;
   font-family: "Barlow", sans-serif;
   font-weight: 400;
