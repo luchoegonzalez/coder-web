@@ -93,7 +93,6 @@ p {
 }
 .header__nav {
   background-color: #141416;
-  padding: 20px 0;
   width: 100%;
   position: fixed;
   top: 0;
@@ -115,6 +114,8 @@ p {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  background-color: #141416;
+  padding: 20px 0;
 }
 .header__nav__home {
   text-decoration: none;
@@ -144,7 +145,8 @@ p {
 }
 @media (max-width: 600px) {
   .header__nav__menu {
-    display: none;
+    transform: translateY(-100%);
+    transition: transform 0.3s ease-in-out;
     flex-direction: column;
     padding: 20px;
     position: absolute;
@@ -153,10 +155,11 @@ p {
     width: 100%;
     background-color: #141416;
     text-align: center;
+    z-index: -1;
   }
 }
 .header__nav__menu.show {
-  display: flex;
+  transform: translateY(0);
 }
 .header__nav__menu .header__nav__link {
   color: #fafafa;
