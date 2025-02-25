@@ -185,6 +185,7 @@ p {
 }
 
 .banner {
+  margin-top: 50px;
   position: relative;
   height: 90vh;
   overflow: hidden;
@@ -195,7 +196,10 @@ p {
 }
 @media (max-width: 600px) {
   .banner {
-    height: 80vh;
+    margin-top: 60px;
+    padding-top: 60px;
+    padding-bottom: 30px;
+    height: 70vh;
   }
 }
 .banner::after {
@@ -210,20 +214,6 @@ p {
   animation: borderRotateAlt 24s linear infinite;
   border-radius: 20px;
 }
-.banner .banner__text {
-  position: absolute;
-  text-align: center;
-  font-size: 1.5em;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  color: #fafafa;
-}
-@media (max-width: 600px) {
-  .banner .banner__text {
-    font-size: 1em;
-  }
-}
 .banner__title--red {
   color: #ff3264;
 }
@@ -235,6 +225,19 @@ p {
 }
 .banner__title--violet {
   color: #af5aff;
+}
+
+.slide {
+  position: absolute;
+  width: 100%;
+  right: 0px;
+  top: 0px;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.slide.active {
+  opacity: 1;
 }
 
 .section {
@@ -338,8 +341,7 @@ p {
 }
 
 #nosotros {
-  margin: 60px 0px;
-  width: 100%;
+  width: 80%;
   display: flex;
   align-items: center;
   justify-content: space-around;
@@ -348,33 +350,54 @@ p {
 @media (max-width: 600px) {
   #nosotros {
     flex-direction: column;
+    width: 95%;
   }
 }
 #nosotros .nosotros__content {
   flex: 0 1 auto;
   text-align: left;
 }
+#nosotros .nosotros__content h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+@media (max-width: 600px) {
+  #nosotros .nosotros__content h1 {
+    font-size: 1.5rem;
+  }
+}
 #nosotros .nosotros__content h2 {
   font-size: 2rem;
   margin-bottom: 1rem;
 }
+@media (max-width: 600px) {
+  #nosotros .nosotros__content h2 {
+    font-size: 1.25rem;
+  }
+}
 #nosotros .nosotros__content h3 {
   font-size: 1.5rem;
-  margin-bottom: 1rem;
 }
-#nosotros .nosotros__content h4 {
-  font-size: 1.25rem;
+@media (max-width: 600px) {
+  #nosotros .nosotros__content h3 {
+    font-size: 1rem;
+  }
 }
 #nosotros .nosotros__image {
   flex: 0 1 auto;
   text-align: center;
-  width: 600px;
+  width: 720px;
+  overflow: hidden;
+  aspect-ratio: 3/2;
   max-width: 100%;
+  position: relative;
 }
 #nosotros .nosotros__image img {
-  width: 100%;
-  height: auto;
   border-radius: 8px;
+}
+
+#ultimos-lanzamientos {
+  margin: 100px 0px;
 }
 
 .page__title {

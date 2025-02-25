@@ -111,6 +111,7 @@
 
 // Banner
 .banner {
+  margin-top: 50px;
   position: relative;
   height: 90vh;
   overflow: hidden;
@@ -118,8 +119,12 @@
   justify-content: center;
   align-items: center;
   background-image: url(../images/live-pattern.png);
+  
   @include responsive(){
-    height: 80vh;
+    margin-top: 60px;
+    padding-top: 60px;
+    padding-bottom: 30px;
+    height: 70vh;
   }
 
   &::after {
@@ -143,19 +148,6 @@
     border-radius: 20px;
   }
 
-  .banner__text {
-    position: absolute;
-    text-align: center;
-    font-size: 1.5em;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: $main-light-color;
-    @include responsive(){
-        font-size: 1em;
-    }
-  }
-
   &__title--red {
     color: $main-red-live;
   }
@@ -168,4 +160,16 @@
   &__title--violet {
     color: $main-violet-live;
   }
+}
+
+.slide {
+  position: absolute;
+  width: 100%;
+  right: 0px;
+  top: 0px;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+.slide.active {
+  opacity: 1;
 }

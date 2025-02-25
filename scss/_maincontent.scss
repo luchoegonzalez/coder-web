@@ -113,8 +113,7 @@
 }
 
 #nosotros {
-  margin: 60px 0px;
-  width: 100%;
+  width: 80%;
   display: flex;
   align-items: center;
   justify-content: space-around;
@@ -122,37 +121,52 @@
 
   @include responsive(){
     flex-direction: column;
+    width: 95%;
   }
   
   .nosotros__content {
     flex: 0 1 auto;
     text-align: left;
 
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+      @include responsive(){
+        font-size: 1.5rem;
+      }
+    }
+
     h2 {
       font-size: 2rem;
       margin-bottom: 1rem;
+      @include responsive(){
+        font-size: 1.25rem;
+      }
     }
 
     h3 {
       font-size: 1.5rem;
-      margin-bottom: 1rem;
-    }
-
-    h4 {
-      font-size: 1.25rem;
+      @include responsive(){
+        font-size: 1rem;
+      }
     }
   }
 
   .nosotros__image {
     flex: 0 1 auto;
     text-align: center;
-    width: 600px;
+    width: 720px;
+    overflow: hidden;
+    aspect-ratio: 3 / 2;
     max-width: 100%;
+    position: relative;
 
     img {
-      width: 100%;
-      height: auto;
       border-radius: 8px;
     }
   }
+}
+
+#ultimos-lanzamientos {
+  margin: 100px 0px;
 }
