@@ -7,4 +7,4 @@ function changeSlide() {
     slides[index].classList.add('active');
 }
 
-setInterval(changeSlide, 3000);
+setInterval(changeSlide, 5000);

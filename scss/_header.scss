@@ -113,6 +113,30 @@
   }
 }
 
+.nav-alt::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: $main-red-live;
+  background-size: 200% 100%;
+  border-radius: 20px;
+}
+
+.nav-alt-yellow::after {
+  background: $main-yellow-live;
+}
+
+.nav-alt-violet::after {
+  background: $main-violet-live;
+}
+
+.nav-alt-cyan::after {
+  background: $main-cyan-live;
+}
+
 // Banner
 .banner {
   margin-top: 50px;
